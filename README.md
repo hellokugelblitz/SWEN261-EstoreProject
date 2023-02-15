@@ -22,7 +22,7 @@ An online E-store system built in Java 8=>11
 1. Clone the repository and go to the root directory.
 2. Execute `mvn compile exec:java`
 3. Open in your browser `http://localhost:4200/`
-4.  _add any other steps required or examples of how to use/run_
+4. Bootstrap
 
 ## Known bugs and disclaimers
 (It may be the case that your implementation is not perfect.)

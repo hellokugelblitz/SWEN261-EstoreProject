@@ -14,7 +14,7 @@ An online E-store system built in Java 8=>11
 
 - Java 8=>11 (Make sure to have correct JAVA_HOME setup in your environment)
 - Maven
--  _add any other tech stack requirements_
+- Bootstrap
 
 
 ## How to run it
@@ -22,7 +22,6 @@ An online E-store system built in Java 8=>11
 1. Clone the repository and go to the root directory.
 2. Execute `mvn compile exec:java`
 3. Open in your browser `http://localhost:4200/`
-4. Bootstrap
 
 ## Known bugs and disclaimers
 (It may be the case that your implementation is not perfect.)

@@ -1,0 +1,49 @@
+<!-- 
+<div class="p-5 text-center bg-image rounded-3" style="
+background-image: url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/animation/pikachu-and-caterpie-01.jpg');
+height: 400px;">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 15px;">
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="text-white">
+    <div class = "signin" *ngIf="(loggedIn() == false); then signInDisplay else signedInDisplay"></div>
+    <ng-template #signInDisplay>
+      <h1 class="mb-3">Start discovering pokemon today!</h1>
+      <h4 class="mb-3">Log in Using the button below!</h4>
+      <a class="btn btn-primary" routerLink="/login" role="button">Log In</a>
+    </ng-template>
+    <ng-template #signedInDisplay>
+      <h1 class="mb-3">Welcome back!</h1>
+    </ng-template>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<app-product-search></app-product-search> -->
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <div *ngIf="(loggedIn() == false && loggedInAsAdmin() == false); then loginDisplay else logoutDisplay"></div>
+        <ng-template #loginDisplay>
+          <h1 class="display-4 fw-bolder">Rare pokemon cards on sale!</h1>
+          <p class="lead fw-normal text-white-50 mb-0">Log in with the button below</p>
+          <button type="button" class="btn btn-outline-primary btn-lg"  routerLink="/login" style="margin-top: 10px;"><i class="bi bi-person"></i>  Log in</button>
+        </ng-template> 
+        <ng-template #logoutDisplay>
+          <h1 class="display-4 fw-bolder">Try our brand new custom card factory!</h1>
+          <p class="lead fw-normal text-white-50 mb-0">Make your own custom pokemon card</p>
+          <button type="button" class="btn btn-outline-primary btn-lg"  routerLink="/cardCreation" style="margin-top: 10px;">Customize</button>
+        </ng-template>
+      </div>
+  </div>
+</header>
+
+<app-products></app-products>

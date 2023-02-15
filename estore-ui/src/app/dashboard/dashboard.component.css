@@ -1,0 +1,38 @@
+ul {
+  display: inline-block;
+}
+
+.bg-dark {
+  background-image: url("../../assets/jumbo_background.png");
+}
+
+.btn {
+  background: #2193b0;  /* fallback for old browsers */
+  background: linear-gradient(to right, #6dd5ed, #29f39a);
+  border: 3px solid #eee;
+
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #6dd5ed, #29f39a);
+  color: rgb(140, 247, 255);
+} 
+
+.log-out {
+  background: #b02121;  /* fallback for old browsers */
+  background: linear-gradient(to right, #ed6d6d, #b02121); 
+  border: 3px solid #eee;
+  border-radius: 5px;
+
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+}
+
+.log-out .log-out:hover {
+  background: linear-gradient(to right, #ed6d6d, #b02121); 
+  color: rgb(255, 140, 140);
+} 

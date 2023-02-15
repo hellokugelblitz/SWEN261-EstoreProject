@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview" style="column-gap: 1px;">
+
+
+                </div>
+                <div class="details">
+                    <h3>Create your very own card!</h3>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Card Moves:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            style="margin-bottom: 15px;"></textarea>
+                    </div>
+
+                    <!-- <form (ngSubmit)="create($event)">
+                    <label for="fname" style="margin-right: 3px; ">Pokemon name:</label>
+                    <input class="form-control" style="margin-bottom: 15px;" type="text" name="Name" value={{name}}>
+                    
+                    <label for="lname" style="margin-right: 3px;">Product Price:</label>
+                    <input class="form-control" style="margin-bottom: 15px;" type="text" name="Price" value={{price}}>
+
+                    <input type="submit" name="submit" style="margin-bottom: 15px;" value="Add to cart" />
+                </form> -->
+
+                    <form (ngSubmit)="create($event)">
+
+                        <label for="fname">Product Name:</label>
+                        <input type="text" name="Name" value={{name}}>
+
+                        <label for="lname">Product Price:</label>
+                        <input type="text" name="Price" value={{price}}>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1" style="margin-right: 3px;">Product image file: </label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                accept="image/jpg, image/png" (change)="onUploadImage($event)">
+                        </div>
+
+                        <input type="submit" name="submit" value="Create Card" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <form (ngSubmit)="create($event)">
+
+    <label for="fname">Product Name:</label>
+    <input type="text" name="Name" value={{name}}>
+
+    <label for="lname">Product Price:</label>
+    <input type="text" name="Price" value={{price}}>
+
+    <label for="productImage">Product Image</label>
+    <input type="file" class="file-input" (change)="onUploadImage($event)" #fileUpload>
+
+
+
+    <input type="submit" name="submit" value="Create Card" />
+</form> -->
+
+
+
+<!-- <div class="file-upload">
+
+        {{fileName || "No file uploaded yet."}}
+
+        <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+        </button>
+    </div> -->

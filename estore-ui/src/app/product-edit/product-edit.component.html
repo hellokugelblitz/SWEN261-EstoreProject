@@ -1,0 +1,72 @@
+<!-- <div class = "container">
+  <div class="card">
+    <div *ngIf="product" class="editForm">
+
+      <h2>Editing: {{product.name | uppercase}}</h2>
+      <h2> Product ID: {{product.id}} </h2>
+
+      <form (ngSubmit)="save($event)">
+
+        <label for="fname">Product Name:</label>
+        <input type="text" name="Name" value={{product.name}}>
+
+        <label for="lname">Product Price:</label>
+        <input type="text" name="Price" value={{product.price}}>
+
+
+
+        <input type="submit" name="submit" value="Save changes" />
+      </form>
+
+      <form (ngSubmit)="delete($event)">
+        <input type="submit" name="delete" value="Delete Product" />
+      </form>
+
+    </div>
+  </div>
+</div> -->
+
+<div *ngIf="product">
+  <div class="container">
+    <div class="card">
+      <div class="container-fliud">
+        <div class="wrapper row">
+          <div class="preview" style="column-gap: 1px;">
+            
+            
+          </div>
+          <div class="details">
+            <h3 class="product-title">Editing: {{product.name}}</h3>
+            <h4 class="stock">Product ID: <span>{{product.id}}</span></h4>
+
+            <form (ngSubmit)="save($event)">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Product Description:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="margin-bottom: 15px;"></textarea>
+              </div>
+
+              <label for="fname" style="margin-right: 3px; ">Product Name:</label>
+              <input class="form-control" style="margin-bottom: 15px;" type="text" name="Name" value={{product.name}}>
+              
+              <label for="lname" style="margin-right: 3px;">Product Price:</label>
+              <input class="form-control" style="margin-bottom: 15px;" type="text" name="Price" value={{product.price}}>
+
+              <input type="submit" name="submit" style="margin-bottom: 15px;" value="Save changes" />
+            </form>
+
+            <form (ngSubmit)="delete($event)">
+              <input type="submit" name="delete" style="margin-bottom: 15px;" value="Delete Product" />
+            </form>
+
+            <div class="form-group">
+              <label for="exampleFormControlFile1" style="margin-right: 3px;">Product image file: </label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

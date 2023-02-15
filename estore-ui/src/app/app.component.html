@@ -1,0 +1,113 @@
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+<body>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a routerLink="/dashboard" class="pull-left"><img src="../assets/pokeball.png" style="width:30px; padding-right: 8px;"></a> 
+        <a class="navbar-brand" routerLink="/dashboard">PokeTrade</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <div *ngIf="loggedInAsAdmin() == true; then adminDisplay"></div>
+                  <ng-template #adminDisplay>
+                    <li class="nav-item"><a class="nav-link" routerLink="/admin">Admin control panel</a></li>
+                </ng-template>
+            </ul>
+
+            <div *ngIf="(loggedIn() && loggedInAsAdmin() == false); then shoppingCartDisplay"></div>
+            <ng-template #shoppingCartDisplay>
+              <form class="d-flex">
+                  <button class="btn btn-outline-dark" type="submit" routerLink="/login" style="margin-right: 10px;">
+                    <i class="bi bi-box-arrow-right"></i>   Log out</button>
+                  <button class="btn btn-outline-dark" type="submit" routerLink="/shoppingCart">
+                      <i class="bi-cart-fill me-1" ></i>
+                      Cart
+                      <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                  </button>
+              </form>
+            </ng-template>
+        </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+  
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark">Team7.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</body>
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">{{title}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+    
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/dashboard">Home</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products">Products</a>
+          </li>
+    
+    
+          <div *ngIf="loggedInAsAdmin() == true; then adminDisplay"></div>
+          <ng-template #adminDisplay>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/admin">Admin Panel</a>
+            </li>
+          </ng-template>
+          
+          <div class = "signin" *ngIf="(loggedIn() && loggedInAsAdmin() == false); then shoppingCartDisplay"></div>
+          <ng-template #shoppingCartDisplay>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/shoppingCart">Shopping Cart</a>
+            </li>
+          </ng-template>
+
+        </ul>
+      </div>
+    </nav>
+    
+    <div class = "main">
+      <router-outlet class = "page-information"></router-outlet>
+    </div>
+
+
+  </body>
+</html>
+ -->
+
+
+<!-- <h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/products">Products</a>
+  <div *ngIf="(loggedIn() && loggedInAsAdmin() == false); then shoppingCartDisplay"></div>
+  <ng-template #shoppingCartDisplay>
+    <a routerLink="/shoppingCart">Shopping Cart</a>
+    <a routerLink="/cardCreation">Card Creation</a>
+  </ng-template>
+  <div *ngIf="loggedInAsAdmin() == true; then adminDisplay"></div>
+  <ng-template #adminDisplay>
+    <a routerLink="/admin">Admin Panel</a>
+  </ng-template>
+  <a routerLink="/login">Login</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages> -->

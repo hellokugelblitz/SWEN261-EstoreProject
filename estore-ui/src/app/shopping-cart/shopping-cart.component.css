@@ -1,0 +1,32 @@
+
+.outline {
+    padding-top: 2%;
+    margin-top: 50px;
+    background: rgb(255, 254, 254);
+    padding: 2em;
+    line-height: 1.5em; 
+    border-radius: 10px;
+}
+
+.card {
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px rgb(168, 168, 168);
+}
+
+.btn {
+    margin-top: 20px;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #29f39a); 
+    border: 3px solid #eee;
+  
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    color: #fff;
+  
+}
+  
+.btn:hover {
+    background: linear-gradient(to right, #6dd5ed, #29f39a);
+    color: rgb(140, 247, 255);
+} 
+  

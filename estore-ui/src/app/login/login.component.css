@@ -1,0 +1,55 @@
+
+
+.card {
+  padding-top: 2%;
+  margin-top: 50px;
+  background: rgb(255, 254, 254);
+  padding: 2em;
+  line-height: 1.5em; 
+  display:inline-block;
+  max-width: 50%;
+}
+
+.card-logout {
+  padding-top: 2%;
+  margin-top: 50px;
+  background: rgb(255, 254, 254);
+  padding: 2em;
+  line-height: 1.5em; 
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.login-form {
+  order: 1;
+  margin-left: 2%;
+  margin-top: 2%;
+  max-width: 100%;
+}
+
+.image-container {
+  float: right;
+  align-items: right;
+  text-align: right;
+}
+
+.image-container img {
+  max-width: 30%;
+}
+
+.btn {
+  background: #2193b0;  /* fallback for old browsers */
+  background: linear-gradient(to right, #6dd5ed, #29f39a);
+  border: 3px solid #eee;
+
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #6dd5ed, #29f39a);
+  color: rgb(140, 247, 255);
+} 
+

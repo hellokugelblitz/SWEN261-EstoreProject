@@ -1,0 +1,46 @@
+
+<div class="container">
+  <div class = "card">
+    <div *ngIf="loggedInAsAdmin() == true; then adminDisplay else userDisplay"></div>
+    <ng-template #adminDisplay>
+      <div>
+        <h2>Administrator Control Panel</h2>
+
+        <h3>Current products:</h3>
+        <div class="products-menu">
+          <ul class="list-group" style="margin-top: 20px; margin-bottom: 20px;">
+            <a *ngFor="let product of products" routerLink="/edit/{{product.id}}" class="list-group-item list-group-item-action">{{product.name}}</a>
+          </ul>
+          <!-- <a *ngFor="let product of products" routerLink="/edit/{{product.id}}">
+            {{product.name}}
+          </a> -->
+        </div>
+        <button class="btn btn-primary btn-lg" type="button" (click)="newProduct();">Add Product</button>
+
+      </div>
+    </ng-template>
+    <ng-template #userDisplay>
+      <h2>Please log in as an admin to use admin control panel!</h2>
+    </ng-template>
+  </div>
+</div>
+
+<!-- <div *ngIf="loggedInAsAdmin() == true; then adminDisplay else userDisplay"></div>
+<ng-template #adminDisplay>
+  <div>
+    <h2>Administrator Control Panel</h2>
+    <h3>Current products:</h3>
+    <div class="products-menu">
+      <a *ngFor="let product of products" routerLink="/edit/{{product.id}}">
+        {{product.name}}
+      </a>
+    </div>
+    
+    <button type="submit" class="new-product" (click)="newProduct()">Create new product</button>
+
+
+  </div>
+</ng-template>
+<ng-template #userDisplay>
+  <h2>Please log in as an admin to use admin control panel!</h2>
+</ng-template> -->

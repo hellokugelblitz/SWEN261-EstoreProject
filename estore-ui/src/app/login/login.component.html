@@ -1,0 +1,72 @@
+
+<div *ngIf="loggedIn() == false; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+      
+      <div class="container">
+        
+        <div class = "card">
+          <div class="login-form">
+            <h2>Log in to get access to our unique selection!</h2>
+        
+            <form style="margin-top: 30px;">
+              <!-- Username input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form2Example1" class="form-control" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"/>
+                <label class="form-label" for="form2Example1">Username</label>
+              </div>
+        
+              <!-- currently pointless Password input -->
+              <div class="form-outline mb-4">
+                <input type="usrename" id="form2Example2" class="form-control" placeholder="*NOT REQUIRED FOR SWEN DEMO*"/>
+                <label class="form-label" for="form2Example2" >Password</label>
+              </div>
+        
+              <!-- Submit button -->
+              <button type="button" class="btn btn-primary btn-block mb-4" (click)="setUser();">Log in</button>
+            </form>
+          </div>
+
+          <div class="image-container">
+            <img src="../../assets/pika.png">
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </ng-template>
+<ng-template #elseBlock>
+  <div class="grid-container">
+    <div class="container">
+      <div class = "card-logout">
+          <h4>Would you like to sign out?</h4>
+
+          <form>
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="logout();" style="margin-top: 15px;">Log out</button>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- <h2>Login</h2>
+<div *ngIf="loggedIn() == false; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div class="center">
+        <div><label for="username">Please enter your username</label></div>
+        <div>
+            <input id="username" [(ngModel)]="username" placeholder="username" />
+            <button type="button" class="button" (click)="setUser();">Login</button>
+        </div>
+    </div>
+</ng-template>
+<ng-template #elseBlock>
+    <div class="center">
+        <div>
+            <button type="button" class="button" (click)="logout();">Logout</button>
+        </div>
+    </div>
+</ng-template> -->
